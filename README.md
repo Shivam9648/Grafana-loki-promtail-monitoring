@@ -3,13 +3,13 @@
 This project implements a complete observability and log monitoring solution using Grafana for visualization, Loki for log aggregation, and Promtail for log collection. The setup is deployed on Ubuntu EC2 instances and connected via SSH for remote configuration.
 
 # Objectives
-Centralized logging for multiple servers
+* Centralized logging for multiple servers
 
-Real-time log visualization and analysis
+* Real-time log visualization and analysis
 
-Easy-to-use Grafana dashboards
+* Easy-to-use Grafana dashboards
 
-Fully open-source monitoring stack
+* Fully open-source monitoring stack
 
 # Tech Stack
 Grafana – Dashboard and visualization
