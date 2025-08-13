@@ -12,15 +12,15 @@ This project implements a complete observability and log monitoring solution usi
 * Fully open-source monitoring stack
 
 # Tech Stack
-Grafana – Dashboard and visualization
+* Grafana – Dashboard and visualization
 
-Loki – Log aggregation and storage
+* Loki – Log aggregation and storage
 
-Promtail – Log collection from server files
+* Promtail – Log collection from server files
 
-Ubuntu EC2 – Deployment environment
+* Ubuntu EC2 – Deployment environment
 
-SSH – Secure remote access
+* SSH – Secure remote access
 
 <img width="1536" height="1024" alt="ChatGPT Image Aug 13, 2025, 06_00_08 PM" src="https://github.com/user-attachments/assets/d3e28e56-d136-4929-b1b8-15bb9b0eba36" />
 
@@ -44,33 +44,33 @@ sudo apt-get update
 # Install the latest OSS release:
 sudo apt-get install grafana
 
- Install and Configure Loki
+3. Install and Configure Loki
  
- Download Loki Config
+* Download Loki Config
 
 
 wget https://raw.githubusercontent.com/grafana/loki/v2.8.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
 
-Run Loki Docker container
+* Run Loki Docker container
 
 docker run -d --name loki -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.8.0 --config.file=/mnt/config/loki-config.yaml
 
-Install and Configure Promtail
+4. Install and Configure Promtail
 
-Download Promtail Config
+* Download Promtail Config
 
 wget https://raw.githubusercontent.com/grafana/loki/v2.8.0/clients/cmd/promtail/promtail-docker-config.yaml -O promtail-config.yaml
 
-Run Promtail Docker container
+* Run Promtail Docker container
 
 docker run -d --name promtail -v $(pwd):/mnt/config -v /var/log:/var/log --link loki grafana/promtail:2.8.0 --config.file=/mnt/config/promtail-config.yaml
 
 # Dashboards
-Error Logs Dashboard – Filters and displays only error-level logs
+* Error Logs Dashboard – Filters and displays only error-level logs
 
-Real-time Logs View – Streams logs directly in Grafana
+* Real-time Logs View – Streams logs directly in Grafana
 
-Historical Log Search – Search logs using Loki query language
+* Historical Log Search – Search logs using Loki query language
 
 # Screenshots
 Grafana Dashboard Example
@@ -78,13 +78,13 @@ Grafana Dashboard Example
 
 
 # Outcomes
-Fully functional observability stack
+* Fully functional observability stack
 
-Real-time and historical log monitoring
+* Real-time and historical log monitoring
 
-AWS EC2 deployment using SSH
+*AWS EC2 deployment using SSH
 
-Easily extendable for any application logs
+* Easily extendable for any application logs
 
 
 
