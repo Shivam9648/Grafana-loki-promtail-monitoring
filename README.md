@@ -1,8 +1,8 @@
 # Grafana-loki-promtail-monitoring
-Overview
+# Overview
 This project implements a complete observability and log monitoring solution using Grafana for visualization, Loki for log aggregation, and Promtail for log collection. The setup is deployed on Ubuntu EC2 instances and connected via SSH for remote configuration.
 
-Objectives
+# Objectives
 Centralized logging for multiple servers
 
 Real-time log visualization and analysis
@@ -11,7 +11,7 @@ Easy-to-use Grafana dashboards
 
 Fully open-source monitoring stack
 
-Tech Stack
+# Tech Stack
 Grafana – Dashboard and visualization
 
 Loki – Log aggregation and storage
@@ -25,7 +25,7 @@ SSH – Secure remote access
 <img width="1536" height="1024" alt="ChatGPT Image Aug 13, 2025, 06_00_08 PM" src="https://github.com/user-attachments/assets/d3e28e56-d136-4929-b1b8-15bb9b0eba36" />
 
 
-Setup Steps
+# Setup Steps
 1. Provision Ubuntu EC2 Servers
 Launch AWS EC2 instances (Ubuntu 20.04 or 22.04).
 
@@ -65,19 +65,19 @@ Run Promtail Docker container
 
 docker run -d --name promtail -v $(pwd):/mnt/config -v /var/log:/var/log --link loki grafana/promtail:2.8.0 --config.file=/mnt/config/promtail-config.yaml
 
-Dashboards
+# Dashboards
 Error Logs Dashboard – Filters and displays only error-level logs
 
 Real-time Logs View – Streams logs directly in Grafana
 
 Historical Log Search – Search logs using Loki query language
 
-Screenshots
+# Screenshots
 Grafana Dashboard Example
 <img width="1919" height="1013" alt="Screenshot 2025-08-13 173834" src="https://github.com/user-attachments/assets/fae90cda-bb44-447e-adb3-2f94eb0649a8" />
 
 
-Outcomes
+# Outcomes
 Fully functional observability stack
 
 Real-time and historical log monitoring
